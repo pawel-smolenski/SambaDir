@@ -1,5 +1,5 @@
 @import "hacks.scss";
-
+@import "mixins";
 body
 {
   font-family: 'Verdana' sans-serif;
@@ -30,4 +30,33 @@ h1
       float: right;
     }
   }
+}
+
+dl.form
+{
+  
+  margin-bottom: 5px;
+  
+  dt,dd
+  {
+    @include inline-block-hack;
+    float: left;
+    margin-bottom: 5px;
+  }
+  
+  dt
+  {
+    clear: left;
+    width: 50px;
+    text-align: right;
+    padding-top: 8px;
+    margin-right: 5px;
+  }
+}
+
+input
+{
+  @include rounded(3px);
+  padding: 3px;
+  font-size: 16px;
 }

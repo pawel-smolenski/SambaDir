@@ -1,9 +1,28 @@
+/* new clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
 .rounded-box {
   border: 1px solid #323232;
-  padding: 5px 10px 5px 10px;
+  padding: 10px;
   display: inline-block;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
-  .rounded-box h1 {
-    margin: 0px; }
+  .rounded-box form {
+    text-align: center; }
+    .rounded-box form dl.form {
+      width: 262px; }
