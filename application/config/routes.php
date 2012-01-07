@@ -1,4 +1,9 @@
 <?php
+Route::set('logout', 'logout')
+->defaults(array(
+		'controller' => 'auth',
+		'action'     => 'logout',
+));
 Route::set('auth', 'auth(/<action>)')
 ->defaults(array(
 		'controller' => 'auth',

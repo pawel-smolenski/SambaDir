@@ -1,5 +1,8 @@
 <?php
 class Controller_Authorized extends Controller_Template {
+	
+	protected $user;
+	
 	public function before()
 	{
 		parent::before();
@@ -8,6 +11,10 @@ class Controller_Authorized extends Controller_Template {
 			Session::instance()->set('referrer', $this->request->detect_uri());
 			$this->request->redirect('auth');
 		}
+		
+		$user = Auth::instance()->get_user();
+		
+		$this->template->user = $user;
 	}
 	
 	

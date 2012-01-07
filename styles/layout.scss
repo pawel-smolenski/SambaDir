@@ -1,10 +1,33 @@
 @import "hacks.scss";
 
+body
+{
+  font-family: 'Verdana' sans-serif;
+}
+
+h1
+{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 #main-wrapper
 {
   width: 960px;
-  @include min-height-hack(90%);
+  height: 600px;
   border: 1px solid;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px;
+  
+  #header
+  {
+    h1
+    {
+      @include inline-block-hack;
+    }
+    #top-menu
+    {
+      float: right;
+    }
+  }
 }

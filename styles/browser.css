@@ -1,0 +1,9 @@
+#column-wrapper {
+  height: 558px; }
+  #column-wrapper .column {
+    border: 1px solid;
+    padding: 5px;
+    height: 100%; }
+    #column-wrapper .column#column-left {
+      width: 200px;
+      float: left; }

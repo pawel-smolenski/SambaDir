@@ -1,8 +1,19 @@
+body {
+  font-family: 'Verdana' sans-serif; }
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px; }
+
 #main-wrapper {
   width: 960px;
-  min-height: 90%;
-  height: auto !important;
-  height: 90%;
+  height: 600px;
   border: 1px solid;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px; }
+  #main-wrapper #header h1 {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+  #main-wrapper #header #top-menu {
+    float: right; }

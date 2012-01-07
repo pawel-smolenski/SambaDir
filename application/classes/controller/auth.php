@@ -8,6 +8,8 @@ class Controller_Auth extends Controller_Template  {
 		parent::before();
 		
 		$this->title = "Logowanie";
+		$this->styles[] = 'login';
+		$this->scripts[] = 'auth';
 	}
 	
 	public function action_index()

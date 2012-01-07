@@ -4,7 +4,7 @@
 	<head>
 		<title><?=isSet($title) ? $title.' - ':'';?>SambaDir</title>
 		<?php 
-			if($styles)
+			if(isSet($styles))
 			{
 				foreach($styles as $style)
 				{
@@ -13,8 +13,20 @@
 			}
 		?>
 		
+
 		<?php 
-			if($scripts)
+			echo HTML::script('scripts/jquery-1.7.1.min');
+			
+			if(isSet($plugins))
+			{
+				foreach($plugins as $plugin)
+				{
+					echo HTML::script('scripts/plugins/'.$plugin.'.js');
+				}
+			}
+		?>	
+		<?php 
+			if(isSet($scripts))
 			{
 				foreach($scripts as $script)
 				{
@@ -24,6 +36,17 @@
 		?>
 	</head>
 	<body>
-		<div id="main-wrapper"><?=$body?></div>
+		<div id="main-wrapper">
+		<div id="header">
+			<h1>SambaDir</h1>
+			<?if(isSet($user)):?>
+			<div id="top-menu">
+				<a href="/logout">wyloguj</a>
+			</div>
+			<?endif;?>
+		</div>
+			
+		<?=$body?>
+		</div>
 	</body>
 </html>

@@ -1,6 +1,4 @@
-<?=html::style('styles/login');?>
-<div class="rounded-box">
-	<h1>SambaDir</h1>
+<div class="rounded-box" id="login-box">
 	<form method="POST">
 		<label for="username">Login</label><input type="text" name="username" /> 
 		<label for="password">Hasło</label><input type="password" name="password" /> 

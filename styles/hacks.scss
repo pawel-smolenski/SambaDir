@@ -4,3 +4,10 @@
   height:auto !important;
   height:$minHeight;
 }
+
+@mixin inline-block-hack
+{
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
