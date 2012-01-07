@@ -1,0 +1,10 @@
+@import "hacks.scss";
+
+#main-wrapper
+{
+  width: 960px;
+  @include min-height-hack(90%);
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 10px;
+}

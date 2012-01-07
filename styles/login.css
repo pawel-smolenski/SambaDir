@@ -1,0 +1,9 @@
+.rounded-box {
+  border: 1px solid #323232;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+  .rounded-box h1 {
+    margin: 0px; }

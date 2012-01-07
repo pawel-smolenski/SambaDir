@@ -1,0 +1,6 @@
+@mixin min-height-hack($minHeight)
+{
+  min-height:$minHeight;
+  height:auto !important;
+  height:$minHeight;
+}

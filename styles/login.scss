@@ -1,0 +1,22 @@
+$black: #323232;
+
+@mixin rounded($radius: 0px)
+{
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.rounded-box
+{
+	border: 1px solid $black;
+	padding: 5px 10px 5px 10px;
+	display: inline-block;
+	
+	@include rounded(3px);
+	
+	h1
+	{
+		margin: 0px;
+	}
+}

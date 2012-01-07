@@ -1,0 +1,8 @@
+#main-wrapper {
+  width: 960px;
+  min-height: 90%;
+  height: auto !important;
+  height: 90%;
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 10px; }
