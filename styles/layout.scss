@@ -3,6 +3,7 @@
 body
 {
   font-family: 'Arial' sans-serif;
+  background: #f5f5f5;
 }
 
 h1
@@ -29,8 +30,8 @@ h1
   border:1px solid #dcdcdc;
   
   -webkit-box-shadow: 0 8px 12px -6px #3f3f3f;
-           -moz-box-shadow: 0 8px 12px -6px #3f3f3f;
-                box-shadow: 0 8px 12px -6px #3f3f3f;
+  -moz-box-shadow: 0 8px 12px -6px #3f3f3f;
+  box-shadow: 0 4px 12px -6px #3f3f3f;
   
   #header
   {
@@ -49,26 +50,12 @@ h1
   }
 }
 
-dl.form
+label.error
 {
-  
-  margin-bottom: 5px;
-  
-  dt,dd
-  {
-    @include inline-block-hack;
-    float: left;
-    margin-bottom: 5px;
-  }
-  
-  dt
-  {
-    clear: left;
-    width: 50px;
-    text-align: right;
-    padding-top: 8px;
-    margin-right: 5px;
-  }
+  color: red;
+  font-size: 10;
+  display: block;
+  margin-bottom: 3px;
 }
 
 input

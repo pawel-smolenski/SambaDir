@@ -9,6 +9,7 @@ class Controller_Auth extends Controller_Template  {
 		
 		$this->title = "Logowanie";
 		$this->styles[] = 'login';
+		$this->plugins[] = 'jquery.validate';
 		$this->scripts[] = 'auth';
 	}
 	
