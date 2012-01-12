@@ -4,19 +4,21 @@ $black: #323232;
 
 .rounded-box
 {
-	border: 1px solid $black;
 	padding: 10px;
 	display: inline-block;
-	
-	@include rounded(3px);
 	
 	form
 	{
 		text-align: center;
 		
-		dl.form
+		ul.form
 		{
 		  width: 262px;
+		  margin-bottom: 10px;
 		}
+		  .action-button
+      {
+        font-size: 11px;
+      }
 	}
 }

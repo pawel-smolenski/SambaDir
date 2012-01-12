@@ -6,15 +6,117 @@
   
   .column
   {
-    border: 1px solid;
-    padding: 5px;
+    border:1px solid #dcdcdc;
     height: 100%;
+    overflow: auto;
+  
+           background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #eaeaea) );
+        background:-moz-linear-gradient( center top, #f5f5f5 5%, #eaeaea 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eaeaea');
   
     &#column-left
     {
-      width: 200px;
-      float: left;
+      width: 180px;
+
+
+
+      #folder-tree
+      {
+        
+      }
     }
+    
+    &#column-right
+    {
+      table#entries
+      {
+        width: 100%;
+        thead
+        {
+          th
+          {
+            color:#777777;
+            font-weight:bold;
+            text-decoration:none;
+            font-size: 10px;
+            text-shadow:1px 1px 0px #ffffff;
+            border-right: 1px solid #dcdcdc;
+            padding: 5px 0;
+            
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+            background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+            background-color:#ededed;
+            
+            &.entry-action
+            {
+              border: none;
+            }
+          }
+        }
+        tbody
+        {
+          tr.entry
+          {
+            
+            &.odd
+            {
+              background: #EEF6FF;
+            }
+            
+            &.even
+            {
+              background: #f5f5f5f;
+            }
+            
+            &:hover
+            {
+              background: #FFB;
+            }
+            
+            td
+            {
+              padding-top: 6px;
+              padding-bottom: 6px;
+              vertical-align: middle;
+              color: #323232;
+              
+              &.entry-name
+              {
+                padding-left: 6px;
+              }
+              
+              &.entry-mod-date
+              {
+                text-align: center;
+              }
+              
+              &.entry-author
+              {
+                text-align: center;
+              }
+              
+              &.entry-action
+              {
+                padding: 0 5px;
+                width: 165px;
+                text-align: center;
+              }
+            }
+          }          
+        }
+      }
+    }
+    
+    
+    
   }
+  
+  .vsplitbar
+  {
+    width: 5px;
+    background: silver;
+  }
+  
   
 }

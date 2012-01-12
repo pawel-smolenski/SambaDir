@@ -16,13 +16,12 @@
 
 /* IE7 */
 .rounded-box {
-  border: 1px solid #323232;
   padding: 10px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px; }
+  display: inline-block; }
   .rounded-box form {
     text-align: center; }
-    .rounded-box form dl.form {
-      width: 262px; }
+    .rounded-box form ul.form {
+      width: 262px;
+      margin-bottom: 10px; }
+    .rounded-box form .action-button {
+      font-size: 11px; }
