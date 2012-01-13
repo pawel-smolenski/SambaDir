@@ -42,10 +42,29 @@ h1
       font-weight:bold;
       text-decoration:none;
       text-shadow:1px 1px 0px #ffffff;
+      padding-left: 28px;
+      padding-bottom: 4px;
+      
+      background-image: url('images/sambadir.png');
+      background-repeat: no-repeat;
+      background-position: left;
+      
+      span
+      {
+        color: #9e0000;
+      }
     }
     #top-menu
     {
       float: right;
+      
+      .logout
+      {
+        background-image: url('images/logout-16.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 12px;
+      }
     }
   }
 }

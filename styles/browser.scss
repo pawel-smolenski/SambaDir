@@ -58,10 +58,11 @@
         {
           tr.entry
           {
-            
+            border-bottom: 1px solid #dcdcdc;
+            font-size: 12px;
             &.odd
             {
-              background: #EEF6FF;
+              background: #fafafa;
             }
             
             &.even
@@ -76,8 +77,8 @@
             
             td
             {
-              padding-top: 6px;
-              padding-bottom: 6px;
+              padding-top: 10px;
+              padding-bottom: 10px;
               vertical-align: middle;
               color: #323232;
               
@@ -115,7 +116,7 @@
   .vsplitbar
   {
     width: 5px;
-    background: silver;
+      background-color:#d5d5d5;
   }
   
   

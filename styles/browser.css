@@ -25,27 +25,30 @@
         background-color: #ededed; }
         #column-wrapper .column#column-right table#entries thead th.entry-action {
           border: none; }
-      #column-wrapper .column#column-right table#entries tbody tr.entry.odd {
-        background: #EEF6FF; }
-      #column-wrapper .column#column-right table#entries tbody tr.entry.even {
-        background: #f5f5f5f; }
-      #column-wrapper .column#column-right table#entries tbody tr.entry:hover {
-        background: #FFB; }
-      #column-wrapper .column#column-right table#entries tbody tr.entry td {
-        padding-top: 6px;
-        padding-bottom: 6px;
-        vertical-align: middle;
-        color: #323232; }
-        #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-name {
-          padding-left: 6px; }
-        #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-mod-date {
-          text-align: center; }
-        #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-author {
-          text-align: center; }
-        #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-action {
-          padding: 0 5px;
-          width: 165px;
-          text-align: center; }
+      #column-wrapper .column#column-right table#entries tbody tr.entry {
+        border-bottom: 1px solid #dcdcdc;
+        font-size: 12px; }
+        #column-wrapper .column#column-right table#entries tbody tr.entry.odd {
+          background: #fafafa; }
+        #column-wrapper .column#column-right table#entries tbody tr.entry.even {
+          background: #f5f5f5f; }
+        #column-wrapper .column#column-right table#entries tbody tr.entry:hover {
+          background: #FFB; }
+        #column-wrapper .column#column-right table#entries tbody tr.entry td {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          vertical-align: middle;
+          color: #323232; }
+          #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-name {
+            padding-left: 6px; }
+          #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-mod-date {
+            text-align: center; }
+          #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-author {
+            text-align: center; }
+          #column-wrapper .column#column-right table#entries tbody tr.entry td.entry-action {
+            padding: 0 5px;
+            width: 165px;
+            text-align: center; }
   #column-wrapper .vsplitbar {
     width: 5px;
-    background: silver; }
+    background-color: #d5d5d5; }

@@ -38,10 +38,10 @@
 	<body>
 		<div id="main-wrapper">
 		<div id="header">
-			<h1>SambaDir</h1>
+			<h1>Samba<span>Dir</span></h1>
 			<?if(isSet($user)):?>
 			<div id="top-menu">
-				<a href="/logout">wyloguj</a>
+				<a href="/logout" class="logout action-button" title="wyloguj"></a>
 			</div>
 			<?endif;?>
 		</div>
