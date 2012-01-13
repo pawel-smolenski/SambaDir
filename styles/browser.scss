@@ -22,6 +22,14 @@
 
       #folder-tree
       {
+        li.placeholder
+        {
+          background-image: url('images/ajax-loader.gif');
+          background-repeat: no-repeat;
+          background-position: left;
+          
+          
+        }
         
       }
     }
@@ -116,7 +124,8 @@
   .vsplitbar
   {
     width: 5px;
-      background-color:#d5d5d5;
+    background-color:#dfdfdf;
+      
   }
   
   

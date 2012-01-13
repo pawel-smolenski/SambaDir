@@ -1,7 +1,7 @@
 <div id="column-wrapper">
 	<div id="column-left" class="column">
 		<ul id="folder-tree" class="filetree">
-		<li><span class="folder">root</span>
+		<li class="open"><span class="folder">root</span>
 			<ul>
 			<?php
 				if(isSet($treeEntries))
@@ -9,7 +9,16 @@
 					foreach($treeEntries->children() as $treeEntry)
 					{
 						if($treeEntry->type == "DIR")
-						 echo '<li><span class="folder">'.$treeEntry->name.'</span></li>';
+						{
+						 echo '<li><span class="folder">'.$treeEntry->name.'</span>';
+						 
+						 if($treeEntry->hasSubDirs)
+						 {
+						 	echo '<ul><li class="placeholder"></li></ul>';
+						 }
+						 
+						 echo '</li>';
+						}
 					}
 				}
 			?>

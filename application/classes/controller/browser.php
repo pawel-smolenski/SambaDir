@@ -8,7 +8,6 @@ class Controller_Browser extends Controller_Authorized
 		
 		$this->styles[] = 'browser';
 		$this->plugins[] = 'jquery.splitter';
-		$this->plugins[] = 'jquery.dataTables';
 		$this->scripts[] = 'browser';
 		$this->title = "Przeglądarka";
 		
