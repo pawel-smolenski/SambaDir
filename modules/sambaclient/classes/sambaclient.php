@@ -1,7 +1,7 @@
 <?php
 class Sambaclient
 {
-	public function login($username, $password)
+	public static function login($username, $password)
 	{
 		//TODO: Napisać logowanie
 		if($username == "test" && $password == "test")
@@ -12,5 +12,17 @@ class Sambaclient
 		{
 			return FALSE;
 		}
+	}
+	
+	public static function getEntriesFromFolder($path)
+	{
+		//TODO: Nadpisać
+		return simplexml_load_file('samples/folders.xml');
+	}
+	
+	public static function getFileToDownload($path, $version=NULL)
+	{
+		//TODO: Nadpisać
+		return 'samples/testDownload.txt';
 	}
 }

@@ -1,4 +1,5 @@
 @import "hacks";
+@import "colors";
 
 #column-wrapper
 {
@@ -22,14 +23,46 @@
 
       #folder-tree
       {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        
         li.placeholder
         {
           background-image: url('images/ajax-loader.gif');
           background-repeat: no-repeat;
           background-position: left;
-          
-          
         }
+        
+        span.folder
+        {
+          background-image: url('images/folder-16.png');
+          padding-left: 20px;
+          
+          &.opened
+          {
+            background-image: url('images/folder-opened-16.png');
+          }
+        }
+        
+        
+        span.folder
+          {
+            cursor: pointer;
+            
+            &:hover
+            {
+              color: $red;
+            }
+            
+            &.active
+            {
+              font-weight: bold;
+            }
+          }
         
       }
     }
@@ -98,11 +131,13 @@
               &.entry-mod-date
               {
                 text-align: center;
+                width: 150px;
               }
               
               &.entry-author
               {
                 text-align: center;
+                width: 100px;
               }
               
               &.entry-action
