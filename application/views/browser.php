@@ -7,6 +7,7 @@
 			
 				$tree = new View('tree');
 				$tree->treeEntries = $treeEntries;
+				$tree->path = $path;
 				
 				
 				echo $tree->render();

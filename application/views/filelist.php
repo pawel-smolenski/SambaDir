@@ -20,7 +20,7 @@ foreach($entries as $entry):?>
 			<td class="entry-author"><?=$entry->lastModifyUsername?></td>
 			<td class="entry-action">
 				<a class="action-button" target="_blank" href="/downloadFile<?=URL::query(array('path' => $path.'/'.$entry->name))?>">Pobierz</a>
-				<a class="action-button">Historia</a>
+				<a class="action-button show-history">Historia</a>
 			</td>
 		</tr>
 	<?php endif;?>

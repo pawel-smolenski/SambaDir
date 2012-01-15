@@ -2,6 +2,9 @@
 
 class Controller_Browser extends Controller_Authorized
 {
+	
+	private $path;
+	
 	public function before()
 	{
 		parent::before();
@@ -9,6 +12,15 @@ class Controller_Browser extends Controller_Authorized
 		$this->styles[] = 'browser';
 		$this->plugins[] = 'jquery.splitter';
 		$this->scripts[] = 'browser';
+		
+		if($this->request->post('path') == NULL)
+		{
+			$this->path = Session::instance()->get('path', '');
+		}
+		else
+		{
+			$this->path = $this->request->post('path');
+		}
 		
 	}
 	
@@ -18,6 +30,7 @@ class Controller_Browser extends Controller_Authorized
 		$content = Sambaclient::getEntriesFromFolder('/');
 		$this->body->treeEntries = $content;
 		$this->body->entries = $content;
+		$this->body->path = '';
 	}
 	
 	public function action_getTree()
@@ -29,30 +42,54 @@ class Controller_Browser extends Controller_Authorized
 			throw new HTTP_Exception_404();
 		}
 
-		$content = Sambaclient::getEntriesFromFolder($this->request->post('path'));
 		
-		$this->response->body(json_encode($content));
+		$entries = Sambaclient::getEntriesFromFolder($this->path);
+		
+		$content = new View('tree');
+		$content->treeEntries = $entries;
+		$content->path = $this->path;
+		
+		$this->response->body($content);
 		
 	}
 	
 	public function action_getFiles()
 	{
-		$this->auto_render = false;
 	
 		if(!$this->request->is_ajax())
 		{
 			throw new HTTP_Exception_404();
 		}
+
+		$this->auto_render = false;
 		
-		$path = $this->request->post('path');
 		
-		$entries = Sambaclient::getEntriesFromFolder($path);
+		//Zapamiętuję ścieżkę do aktualnie przeglądanego folderu
+		Session::instance()->bind('path', $this->path);
+		
+		$entries = Sambaclient::getEntriesFromFolder($this->path);
 	
 		$content = new View('filelist');
 		$content->entries = $entries;
-		$content->path = $path;
+		$content->path = $this->path;
 		
 		$this->response->body($content->render());
+	}
+	
+	public function action_getHistory()
+	{
+		if(!$this->request->is_ajax())
+		{
+			throw new HTTP_Exception_404();
+		}
+		
+		$this->auto_render = false;
+		
+		
+		$content = new View('history');
+		$content->path = $this->path;
+		
+		$this->response->body($content);
 	}
 	
 	public function action_downloadFile()

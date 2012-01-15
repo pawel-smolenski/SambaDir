@@ -21,6 +21,12 @@ Route::set('ajax/getFiles', 'ajax/getFiles')
 		'action'     => 'getFiles',
 ));
 
+Route::set('ajax/getHistory', 'ajax/getHistory')
+->defaults(array(
+		'controller' => 'browser',
+		'action'     => 'getHistory',
+));
+
 Route::set('downloadFile', 'downloadFile')
 ->defaults(array(
 		'controller' => 'browser',

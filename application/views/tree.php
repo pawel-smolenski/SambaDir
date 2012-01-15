@@ -1,5 +1,4 @@
 <?php
-				if(!isSet($path)) $path = '';
 				if(isSet($treeEntries))
 				{ 
 					foreach($treeEntries->children() as $treeEntry)

@@ -73,6 +73,26 @@
             padding: 0 5px;
             width: 165px;
             text-align: center; }
+    #column-wrapper .column#column-right .header {
+      padding: 5px; }
+      #column-wrapper .column#column-right .header h2 {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        color: #777777;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 1px 1px 0px #ffffff;
+        margin-right: 20px; }
+      #column-wrapper .column#column-right .header .path {
+        font-size: 12px; }
+      #column-wrapper .column#column-right .header .go-back {
+        padding-left: 19px;
+        padding-right: 5px;
+        background-image: url("images/back-10.png");
+        background-repeat: no-repeat;
+        background-position: 5px 3px;
+        float: right; }
   #column-wrapper .vsplitbar {
     width: 5px;
     background-color: #dfdfdf; }

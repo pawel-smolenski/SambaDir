@@ -150,6 +150,36 @@
           }          
         }
       }
+      
+      .header
+      {
+        padding: 5px;
+         
+        h2
+        {
+          @include inline-block-hack;
+          color:#777777;
+          font-weight:bold;
+          text-decoration:none;
+          text-shadow:1px 1px 0px #ffffff;
+          margin-right: 20px;
+        }
+        
+        .path
+        {
+          font-size: 12px;
+        }
+        
+        .go-back
+        {
+          padding-left: 19px;
+          padding-right: 5px;
+          background-image: url('images/back-10.png');
+          background-repeat: no-repeat;
+          background-position: 5px 3px;
+          float: right;
+        }
+      }
     }
     
     
