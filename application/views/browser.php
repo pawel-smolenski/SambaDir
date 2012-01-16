@@ -1,7 +1,7 @@
 <div id="column-wrapper">
 	<div id="column-left" class="column">
 		<ul id="folder-tree" class="filetree">
-		<li class="open"><span class="folder opened">root</span>
+		<li><span class="folder opened active" data-path="" data-has-sub-folders="true">root</span>
 			<ul>
 			<?
 			

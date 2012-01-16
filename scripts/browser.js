@@ -39,7 +39,7 @@ $(function() {
 		$.ajax({
 			url: '/ajax/getFiles',
 			type: 'post',
-			data: {path: node.data('path')},
+			data: {path: $(this).data('path')},
 			context: $(this).parent('li'),
 			success: function(data){
 				columnRight = $('#column-right');

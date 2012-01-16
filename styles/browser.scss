@@ -1,5 +1,6 @@
 @import "hacks";
 @import "colors";
+@import "mixins";
 
 #column-wrapper
 {
@@ -23,12 +24,7 @@
 
       #folder-tree
       {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+        
         
         li.placeholder
         {
@@ -145,6 +141,7 @@
                 padding: 0 5px;
                 width: 165px;
                 text-align: center;
+                @include user-select(none);
               }
             }
           }          
@@ -168,6 +165,7 @@
         .path
         {
           font-size: 12px;
+          color: $black;
         }
         
         .go-back
