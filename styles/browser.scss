@@ -195,13 +195,6 @@
           @include rounded(3px);
           border: 1px solid;
           
-          &:hover
-          {
-              -webkit-box-shadow: 0 0px 20px -5px #3f3f3f;
-              -moz-box-shadow: 0 0px 20px -5px #3f3f3f;
-              box-shadow: 0 0px 20px -5px #3f3f3f;
-          }
-          
           &.create
           {
             @include gradient(#CCFFD0, #B3FFB9);

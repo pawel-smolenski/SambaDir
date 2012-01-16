@@ -58,6 +58,14 @@ h1 {
       color: #9e0000; }
   #main-wrapper #header #top-menu {
     float: right; }
+    #main-wrapper #header #top-menu .logged-username {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      font-size: 16px;
+      position: relative;
+      top: -8px;
+      right: 10px; }
     #main-wrapper #header #top-menu .logout {
       background-image: url("images/logout-16.png");
       background-repeat: no-repeat;

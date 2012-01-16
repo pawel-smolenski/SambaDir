@@ -1,6 +1,16 @@
 <?php
+
 class Sambaclient
 {
+	private $programName;
+	private $username;
+	private $password;
+	
+	public function Sambaclient()
+	{
+		
+	}
+	
 	public static function login($username, $password)
 	{
 		//TODO: Napisać logowanie
@@ -14,19 +24,19 @@ class Sambaclient
 		}
 	}
 	
-	public static function getEntriesFromFolder($path)
+	public function getEntriesFromFolder($path)
 	{
 		//TODO: Nadpisać
 		return simplexml_load_file('samples/folders.xml');
 	}
 	
-	public static function getFileToDownload($path, $version=NULL)
+	public function getFileToDownload($path, $version=NULL)
 	{
 		//TODO: Nadpisać
 		return 'samples/testDownload.txt';
 	}
 	
-	public static function getHistoryForFile($path)
+	public function getHistoryForFile($path)
 	{
 		//TODO: Nadpisać
 		return simplexml_load_file('samples/history.xml');

@@ -39,9 +39,9 @@
 		<div id="main-wrapper">
 		<div id="header">
 			<h1>Samba<span>Folder</span></h1>
-			<?if(isSet($user)):?>
+			<?if(isSet($username)):?>
 			<div id="top-menu">
-				<a href="/logout" class="logout action-button" title="wyloguj"></a>
+				<span class="logged-username"><?=$username?></span><a href="/logout" class="logout action-button" title="wyloguj"></a>
 			</div>
 			<?endif;?>
 		</div>

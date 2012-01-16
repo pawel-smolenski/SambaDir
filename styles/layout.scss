@@ -60,6 +60,15 @@ h1
     {
       float: right;
       
+      .logged-username
+      {
+        @include inline-block-hack;
+        font-size: 16px;
+        position: relative;
+        top: -8px;
+        right: 10px;
+      }
+      
       .logout
       {
         background-image: url('images/logout-16.png');

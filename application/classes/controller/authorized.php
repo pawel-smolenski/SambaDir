@@ -1,7 +1,10 @@
 <?php
 class Controller_Authorized extends Controller_Template {
 	
-	protected $user;
+	protected $username;
+	protected $passowrd;
+	
+	protected $client;
 	
 	public function before()
 	{
@@ -16,9 +19,12 @@ class Controller_Authorized extends Controller_Template {
 			$this->request->redirect('auth');
 		}
 		
-		$user = Auth::instance()->get_user();
+		$this->username = Auth::instance()->get_user();
+		$this->password = Auth::instance()->password($this->username);
 		
-		$this->template->user = $user;
+		$this->client = new Sambaclient($this->username, $this->password);
+		
+		$this->template->username = $this->username;
 	}
 	
 	

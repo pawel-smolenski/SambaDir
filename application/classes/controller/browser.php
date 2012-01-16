@@ -27,7 +27,7 @@ class Controller_Browser extends Controller_Authorized
 	public function action_index()
 	{
 		$this->body = new View('browser');
-		$content = Sambaclient::getEntriesFromFolder('/');
+		$content = $this->client->getEntriesFromFolder('/');
 		$this->body->treeEntries = $content;
 		$this->body->entries = $content;
 		$this->body->path = '';
@@ -43,7 +43,7 @@ class Controller_Browser extends Controller_Authorized
 		}
 
 		
-		$entries = Sambaclient::getEntriesFromFolder($this->path);
+		$entries = $this->client->getEntriesFromFolder($this->path);
 		
 		$content = new View('tree');
 		$content->treeEntries = $entries;
@@ -67,7 +67,7 @@ class Controller_Browser extends Controller_Authorized
 		//Zapamiętuję ścieżkę do aktualnie przeglądanego folderu
 		Session::instance()->bind('path', $this->path);
 		
-		$entries = Sambaclient::getEntriesFromFolder($this->path);
+		$entries = $this->client->getEntriesFromFolder($this->path);
 	
 		$content = new View('filelist');
 		$content->entries = $entries;
@@ -85,7 +85,7 @@ class Controller_Browser extends Controller_Authorized
 		
 		$this->auto_render = false;
 		
-		$historyEntries = Sambaclient::getHistoryForFile($this->path);
+		$historyEntries = $this->client->getHistoryForFile($this->path);
 		
 		$content = new View('history');
 		$content->path = $this->path;
@@ -97,6 +97,6 @@ class Controller_Browser extends Controller_Authorized
 	public function action_downloadFile()
 	{
 		$path = $this->request->query('path');
-		$this->response->send_file(Sambaclient::getFileToDownload($path));
+		$this->response->send_file($this->client->getFileToDownload($path));
 	}
 }

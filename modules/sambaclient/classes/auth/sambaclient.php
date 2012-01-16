@@ -6,11 +6,10 @@
  		if(strlen($username) < 1 || strlen($password) < 1)
  			return FALSE;
  		
- 		$sambaclient = new Sambaclient;
  		
- 		if($sambaclient->login($username, $password))
+ 		if(Sambaclient::login($username, $password))
  		{
- 			$this->complete_login($username);
+ 			$this->complete_login($username, $password);
  			
  			return TRUE;
  		}
@@ -20,9 +19,22 @@
  		}
  	}
  	
- 	public function password($username)
+ 	protected function complete_login($username, $password=NULL)
  	{
- 		return null;
+ 		// Regenerate session_id
+ 		$this->_session->regenerate();
+ 		
+ 		// Store username in session
+ 		$this->_session->set($this->_config['session_key'], $user);
+ 		
+ 		$this->_session->set($this->_config['session_key'].'password', $password);
+ 		
+ 		return TRUE;
+ 	}
+ 	
+ 	public function password($username=NULL)
+ 	{
+ 		return $this->_session->get($this->_config['session_key'].'password', NULL);
  	}
  	
  	public function check_password($password)
