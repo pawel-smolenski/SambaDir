@@ -85,9 +85,11 @@ class Controller_Browser extends Controller_Authorized
 		
 		$this->auto_render = false;
 		
+		$historyEntries = Sambaclient::getHistoryForFile($this->path);
 		
 		$content = new View('history');
 		$content->path = $this->path;
+		$content->historyEntries = $historyEntries;
 		
 		$this->response->body($content);
 	}

@@ -25,4 +25,10 @@ class Sambaclient
 		//TODO: Nadpisać
 		return 'samples/testDownload.txt';
 	}
+	
+	public static function getHistoryForFile($path)
+	{
+		//TODO: Nadpisać
+		return simplexml_load_file('samples/history.xml');
+	}
 }

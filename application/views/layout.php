@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title><?=isSet($title) ? $title.' - ':'';?>SambaDir</title>
+		<title><?=isSet($title) ? $title.' - ':'';?>SambaFolder</title>
 		<?php 
 			if(isSet($styles))
 			{
@@ -38,7 +38,7 @@
 	<body>
 		<div id="main-wrapper">
 		<div id="header">
-			<h1>Samba<span>Dir</span></h1>
+			<h1>Samba<span>Folder</span></h1>
 			<?if(isSet($user)):?>
 			<div id="top-menu">
 				<a href="/logout" class="logout action-button" title="wyloguj"></a>
