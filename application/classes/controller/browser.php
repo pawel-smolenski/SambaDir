@@ -49,7 +49,7 @@ class Controller_Browser extends Controller_Authorized
 		$content->treeEntries = $entries;
 		$content->path = $this->path;
 		
-		$this->response->body($content);
+		$this->response->body(Ajax::success($content->render()));
 		
 	}
 	
@@ -73,7 +73,7 @@ class Controller_Browser extends Controller_Authorized
 		$content->entries = $entries;
 		$content->path = $this->path;
 		
-		$this->response->body($content->render());
+		$this->response->body(Ajax::success($content->render()));
 	}
 	
 	public function action_getHistory()
@@ -91,7 +91,7 @@ class Controller_Browser extends Controller_Authorized
 		$content->path = $this->path;
 		$content->historyEntries = $historyEntries;
 		
-		$this->response->body($content);
+		$this->response->body(Ajax::success($content->render()));
 	}
 	
 	public function action_downloadFile()

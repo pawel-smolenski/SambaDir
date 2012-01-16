@@ -63,10 +63,11 @@ h1
       .logged-username
       {
         @include inline-block-hack;
-        font-size: 16px;
+        font-size: 14px;
         position: relative;
         top: -8px;
         right: 10px;
+        color: $black;
       }
       
       .logout

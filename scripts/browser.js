@@ -30,9 +30,12 @@ $(function() {
 			type: 'post',
 			data: {path: node.data('path')},
 			context: $(this).parent('li'),
-			success: function(data){
-				this.append('<ul></ul>');
-				$(data).appendTo(this.children('ul'));
+			dataType: 'json',
+			success: function(response){
+				if(response.status == 'OK'){
+					this.append('<ul></ul>');
+					$(response.data).appendTo(this.children('ul'));
+				}
 			}
 		});
 	}).live('load-files', function(event){
@@ -41,10 +44,13 @@ $(function() {
 			type: 'post',
 			data: {path: $(this).data('path')},
 			context: $(this).parent('li'),
-			success: function(data){
-				columnRight = $('#column-right');
-				columnRight.children().remove();
-				columnRight.append($(data));
+			dataType: 'json',
+			success: function(response){
+				if(response.status = 'OK'){
+					columnRight = $('#column-right');
+					columnRight.children().remove();
+					columnRight.append($(response.data));
+				}
 			}
 		});
 	}).live('click', function(event){
@@ -59,10 +65,13 @@ $(function() {
 			url: '/ajax/getHistory',
 			type: 'post',
 			data: {path: $(this).closest('tr').data('path')},
-			success: function(data){
-				columnRight = $('#column-right');
-				columnRight.children().remove();
-				columnRight.append(data);
+			dataType: 'json',
+			success: function(response){
+				if(response.status='OK'){
+					columnRight = $('#column-right');
+					columnRight.children().remove();
+					columnRight.append(response.data);
+				}
 			}
 		});
 	});

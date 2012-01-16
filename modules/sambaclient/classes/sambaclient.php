@@ -6,9 +6,17 @@ class Sambaclient
 	private $username;
 	private $password;
 	
-	public function Sambaclient()
+	public function Sambaclient($username, $password)
 	{
+		$this->username = $username;
+		$this->password = $password;
 		
+		$this->programName = Kohana::$config->load('sambaclient')->get('programName');
+	}
+
+	private function execute(array $args)
+	{
+		$command = "java "+$this->programName;
 	}
 	
 	public static function login($username, $password)
