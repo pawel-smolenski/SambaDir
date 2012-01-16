@@ -25,7 +25,7 @@
  		$this->_session->regenerate();
  		
  		// Store username in session
- 		$this->_session->set($this->_config['session_key'], $user);
+ 		$this->_session->set($this->_config['session_key'], $username);
  		
  		$this->_session->set($this->_config['session_key'].'password', $password);
  		
