@@ -44,7 +44,7 @@ class Controller_Auth extends Controller_Template  {
 	{
 		if(Auth::instance()->get_user())
 		{
-			Auth::instance()->logout();
+			Auth::instance()->logout(TRUE);
 		}
 		
 		return $this->action_index();
